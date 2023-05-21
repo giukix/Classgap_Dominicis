@@ -1,0 +1,38 @@
+Esercizio 2.1.3. Si vuole progettare una classe Treno le cui istanze sono
+	costruite a partire da un vagone di tipo Locomotiva. Il treno è dotato dei
+	seguenti metodi:
+
+	- aggiungiVagone, che aggiunge in coda al treno il vagone fornito in input;
+
+	- dividiTreno che, data una posizione k e una locomotiva in input, toglie
+	dal treno attuale tutti i vagoni dalla posizione k in poi e li inserisce in un
+	nuovo treno, accodandoli alla locomotiva in input. Gestire gli opportuni
+	casi di eccezione.
+
+	- toString, che restituisce una stringa contenente i nomi dei vagoni del
+	treno separati da "--", da sinistra verso destra. Il primo vagone sarà
+	quindi quello della locomotiva. Un esempio è la stringa:
+	
+	"Locomotiva--VagonePasseggeri--VagoneLetto--VagoneMerci"
+
+
+	Ogni vagone contiene le seguenti informazioni: destinazione e numero di posti
+	disponibili. Inoltre ogni vagone dispone di un metodo getNumeroPostiLiberi
+	per ottenere il numero di posti liberi rimasti nel vagone.
+	Si vogliono progettare, oltre alla Locomotiva, diversi tipi di Vagone, ovvero:
+	- VagonePasseggeri, che possiede 50 posti;
+	- VagoneLetto, che possiede 10 posti;
+	- VagoneMerci, che non possiede posti liberi.
+	Codificare le costanti in modo appropriato. Tutti i vagoni dispongono del
+	metodo occupa che, dato in ingresso un passeggero, lo registrano nell'elenco dei
+	passeggeri del vagone se questo dispone di posti liberi, emettendo un'eccezione
+	altrimenti. Al momento della registrazione, viene stampato a video il messaggio:
+	
+	"Passeggero <nome> registrato", dove <nome> è il nome del passeggero.
+	
+	Mentre il VagonePasseggeri ammette tutti i tipi di passeggeri, il VagoneLetto
+	ammette solo passeggeri assonnati.
+	Infine si progettino i due tipi di passeggero Passeggero (costruita a partire
+	da un nome del passeggero) e PasseggeroAssonnato (costruita con un nome
+	standard "passeggero assonnato"). Entrambe implementano il metodo getNome
+	che ne restituisce il nome.
